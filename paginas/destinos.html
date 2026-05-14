@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Novelo Chan Mabel Alejandra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos | Viappy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mis-estilos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Viappy</a>
+        <ul class="nav-links">
+            <li><a href="../viappy.html">Inicio</a></li>
+            <li><a href="quienesomos.html">¿Quiénes somos?</a></li>
+            <li><a href="#">Destinos</a></li>
+            <li><a href="reserva.html" class="btn-nav">Reservar ahora</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Filtrar por:</h3>
+            <p>Precio máximo:</p>
+            <input type="range" min="500" max="5000" step="100">
+            
+            <h3 style="margin-top: 2rem;">Categoría</h3>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox"> Playas</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox"> Aventura</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="checkbox"> Ciudades</label>
+            
+            <h3 style="margin-top: 2rem;">Duración</h3>
+            <label style="display: block; margin-bottom: 10px;"><input type="radio" name="dur"> 3-5 días</label>
+            <label style="display: block; margin-bottom: 10px;"><input type="radio" name="dur"> 1-2 semanas</label>
+        </aside>
+
+        <main class="content">
+            <header class="destinos-header">
+                <h1>Nuestros Destinos</h1>
+                <input type="text" class="search-box" placeholder="¿A dónde quieres ir?">
+            </header>
+
+            <div class="destinos-grid">
+                <article class="card">
+                    <span class="badge">MÁS VISTO</span>
+                    <img src="../images/santodomingo.jpg" class="card-img" alt="Pueblo Mágico">
+                    <div class="card-body">
+                        <div class="rating">★★★★★ (4.9)</div>
+                        <h3>Punta Cana y Santo Domingo, República Dominicana</h3>
+                        <p>Combina historia, cultura, playa paradisíacas y descanso en un viaje diseñado para disfrutar al máximo.</p>
+                        <div class="price-tag">$26,900 MXN</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="../images/guatapeviappy.jpg" class="card-img" alt="Santorini">
+                    <div class="card-body">
+                        <div class="rating">★★★★★ (5.0)</div>
+                        <h3>Guatapé, Colombia</h3>
+                        <p>Un destino que combina la aventura, la cultura y la belleza natural. Vívela y olvídate de todos los problema.</p>
+                        <div class="price-tag">$28,900 MXN</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="badge">MÁS VENDIDO</span>
+                    <img src="../images/parisfranciaviappy.jpg" class="card-img" alt="Tokio">
+                    <div class="card-body">
+                        <div class="rating">★★★★☆ (4.7)</div>
+                        <h3>Paris, Francia</h3>
+                        <p>La mezcla perfecta entre tradición y tecnología. Ven a conocer la ciudad del amor, aquella que jamás olvidarás y siempre querrás volver.</p>
+                        <div class="price-tag">$50,200 MXN</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="../images/estambul.jpg" class="card-img" alt="Suiza">
+                    <div class="card-body">
+                        <div class="rating">★★★★★ (4.8)</div>
+                        <h3>Estambul, Turquía</h3>
+                        <p> Recorre la impresionante Estambul, donde Oriente y Occidente se encuentran; continúa por la histórica Ankara</p>
+                        <div class="price-tag">$36,330 MXN por persona</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="badge">ÚLTIMOS CUPOS</span>
+                    <img src="../images/bahiaprincipe.jpg" class="card-img" alt="Bali">
+                    <div class="card-body">
+                        <div class="rating">★★★★★ (4.9)</div>
+                        <h3>Hotel Bahía Príncipe Grand Coba, Tulum</h3>
+                        <p>Festeja las fiestas patrias en este increíble hotel. Sin ninguna preocupación que no sea divertirte. </p>
+                        <div class="price-tag">$4,310 MXN Adulto</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="../images/rabatmarruecos.jpg" class="card-img" alt="Nueva York">
+                    <div class="card-body">
+                        <div class="rating">★★★★☆ (4.6)</div>
+                        <h3>Rabat, Marruecos.</h3>
+                        <p>Embárcate en una aventura inolvidable por Marruecos. Disfruta de lo que Rabat tiene para ofrecerte. ¿Te atreves?</p>
+                        <div class="price-tag">Desde $34,590 MXN</div>
+                        <a href="#" class="btn-ver">Ver Disponibilidad</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Valencia Serrano Cynthia Carolina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viappy | Explora el mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mis-estilos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Viappy</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="paginas/quienesomos.html">¿Quiénes somos?</a></li>
+            <li><a href="paginas/destinos.html">Destinos</a></li>
+            <li><a href="paginas/reserva.html" class="btn-nav">Reservar ahora</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Filtros de búsqueda</h3>
+            <ul>
+                <li><a href="#">✈️ Vuelos </a></li>
+                <li><a href="#">🏨 Hoteles </a></li>
+            </ul>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+            <h3>Soporte</h3>
+            <ul>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="hero">
+                <h1>Tu próximo destino comienza aquí</h1>
+                <p>Descubre ofertas exclusivas en los lugares más increíbles del mundo.</p>
+            </header>
+
+            <h2>Destinos Destacados</h2>
+            <div class="destinos-grid">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <img src="images/puntacanaviappy.jpg" alt="Bali">
+                    <div class="card-body">
+                        <h3>Punta Cana, República Dominicana</h3>
+                        <p>Paraíso, lujo y descanso, el lugar de tus sueños.</p>
+                        <a href="#" class="btn-card">Ver detalles</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="card">
+                    <img src="images/parisfranciaviappy.jpg" alt="París">
+                    <div class="card-body">
+                        <h3>París, Francia</h3>
+                        <p>La ciudad de la luz y la gastronomía de clase mundial.</p>
+                        <a href="#" class="btn-card">Ver detalles</a>
+                    </div>
+                </article>
+
+                                <article class="card">
+                    <img src="images/guatapeviappy.jpg" alt="Venecia">
+                    <div class="card-body">
+                        <h3>Guatapé, Colombia</h3>
+                        <p>Lago, encanto y tradición, el lugar que tienes que descubrir.</p>
+                        <a href="#" class="btn-card">Ver detalles</a>
+                    </div>
+                </article>
+
+            </div>
+            <section class="form-section">
+                <h2>¿A dónde quieres ir?</h2>
+                <p>Déjanos tus datos y un asesor te contactará con una oferta personalizada.</p>
+                <form style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input type="text" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" placeholder="angiequiereviajar@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Preferencia de viaje</label>
+                        <select>
+                            <option>Playa y Relajación</option>
+                            <option>Aventura y Montaña</option>
+                            <option>Cultura y Ciudad</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-card" style="border: none; width: 100%; cursor: pointer; font-size: 1rem; font-weight: bold;">
+                        Solicitar información
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

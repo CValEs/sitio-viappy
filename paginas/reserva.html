@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Paredes Mena Ingrid Belén">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Viaje | Viappy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-principal: #0056b3;
+            --azul-oscuro: #003d80;
+            --azul-claro: #e7f1ff;
+            --blanco: #ffffff;
+            --gris-texto: #444;
+            --verde-exito: #28a745;
+            --sombra: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--gris-texto);
+            background-color: #f4f7f6;
+        }
+
+        .navbar {
+            background-color: var(--azul-principal);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            color: white;
+        }
+
+        .logo { font-size: 1.8rem; font-weight: 700; text-decoration: none; color: white; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; padding: 8px 15px; }
+
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+            padding: 2rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .resumen-sidebar {
+            background-color: var(--blanco);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--sombra);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .resumen-sidebar h3 { color: var(--azul-principal); border-bottom: 2px solid var(--azul-claro); padding-bottom: 10px; margin-bottom: 1rem; }
+        
+        .detalle-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9rem; }
+        .total-pago { font-size: 1.5rem; font-weight: 700; color: var(--azul-principal); margin-top: 1rem; border-top: 1px solid #eee; pt: 10px; }
+
+        /* Contenido del Formulario */
+        .booking-content { background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--sombra); }
+
+        .section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; color: var(--azul-principal); }
+        .step-num { background: var(--azul-principal); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+
+        .grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-weight: 700; margin-bottom: 5px; font-size: 0.9rem; }
+        .form-group input, .form-group select { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
+
+        .full-width { grid-column: span 2; }
+
+        /* Métodos de Pago Simulados */
+        .payment-methods { display: flex; gap: 1rem; margin-top: 10px; }
+        .method { border: 1px solid #ddd; padding: 10px; border-radius: 8px; flex: 1; text-align: center; cursor: pointer; transition: 0.3s; }
+        .method:hover { border-color: var(--azul-principal); background: var(--azul-claro); }
+
+        .btn-confirmar {
+            width: 100%;
+            background: var(--verde-exito);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-confirmar:hover { background: #218838; transform: translateY(-2px); }
+
+        .secure-note { font-size: 0.8rem; text-align: center; margin-top: 1rem; color: #888; }
+
+        @media (max-width: 900px) {
+            .main-container { grid-template-columns: 1fr; }
+            .resumen-sidebar { order: -1; position: static; }
+            .grid-form { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Viappy</a>
+        <ul class="nav-links">
+            <li><a href="../viappy.html">Inicio</a></li>
+            <li><a href="quienesomos.html">¿Quiénes somos?</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <!-- Sidebar: Resumen de lo que el usuario está reservando -->
+        <aside class="resumen-sidebar">
+            <h3>Tu Viaje</h3>
+            <div class="detalle-item"><strong>Destino:</strong> <span>Guatapé, Colombia</span></div>
+            <div class="detalle-item"><strong>Duración:</strong> <span>8 Días / 7 Noches</span></div>
+            <div class="detalle-item"><strong>Personas:</strong> <span>2 Adultos</span></div>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+            <div class="detalle-item"><span>Precio Base</span> <span>$57,800.00</span></div>
+            <div class="detalle-item"><span>Impuestos</span> <span>$9,248.00</span></div>
+            <div class="total-pago">
+                <div class="detalle-item"><span>Total</span> <span>$67,048.00</span></div>
+            </div>
+            <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">* Cancelación gratuita hasta 48 hrs antes.</p>
+        </aside>
+
+        <!-- Formulario Principal -->
+        <main class="booking-content">
+            <form>
+                <!-- Paso 1: Información del Viajero -->
+                <div class="section-title">
+                    <span class="step-num">1</span>
+                    <h2>Datos del Viajero</h2>
+                </div>
+                <div class="grid-form">
+                    <div class="form-group">
+                        <label>Nombre(s)</label>
+                        <input type="text" placeholder="Ej. Angie">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" placeholder="Ej. Suárez">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="angiequiereviajar@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono de contacto</label>
+                        <input type="tel" placeholder="+52 99945612">
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <span class="step-num">2</span>
+                    <h2>Personaliza tu experiencia</h2>
+                </div>
+                <div class="grid-form">
+                    <div class="form-group full-width">
+                        <label>¿Alguna petición especial? (Opcional)</label>
+                        <input type="text" placeholder="Ej. Habitación en piso alto, alergias alimentarias...">
+                    </div>
+                    <div class="form-group">
+                        <label>Seguro de Viaje</label>
+                        <select>
+                            <option>Básico (Incluido)</option>
+                            <option>Premium (+ $1,000 MXN)</option>
+                            <option>Sin seguro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Paso 3: Pago -->
+                <div class="section-title">
+                    <span class="step-num">3</span>
+                    <h2>Método de Pago</h2>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;">Selecciona cómo deseas pagar tu aventura:</p>
+                <div class="payment-methods">
+                    <div class="method">💳 Tarjeta</div>
+                    <div class="method">🅿️ PayPal</div>
+                    <div class="method">🏦 Transferencia</div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <label style="font-size: 0.85rem; display: flex; gap: 10px; cursor: pointer;">
+                        <input type="checkbox"> Acepto los términos, condiciones y políticas de privacidad de Viappy.
+                    </label>
+                    <button type="submit" class="btn-confirmar">CONFIRMAR MI RESERVA</button>
+                    <p class="secure-note">🔒 Pago 100% seguro</p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
